@@ -17,7 +17,7 @@ use Carp qw(); # don't import croak
 use Scalar::Util qw( weaken blessed reftype );
 use Time::HiRes qw( gettimeofday );
 
-our @CARP_NOT = qw( Future Future::Utils );
+our @CARP_NOT = qw(Future::_base Future Future::Utils );
 
 use constant DEBUG => !!$ENV{PERL_FUTURE_DEBUG};
 
