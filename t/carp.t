@@ -8,6 +8,6 @@ async sub make_fail{
 }
 
 eval {make_fail()->get};
-isnt $@, "error here! at /tmp/Future-v0.49/lib/Future.pm line 555.\n";
+unlike $@, qr{error here! at .*/lib/Future.pm line 555};
 
 done_testing();
